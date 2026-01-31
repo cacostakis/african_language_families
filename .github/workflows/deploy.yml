@@ -14,12 +14,7 @@ jobs:
         uses: r-lib/actions/setup-r@v2
         
       - name: Install dependencies
-        run: |
-          install.packages("shinylive")
-          install.packages(c("shiny", "viridis", "tidyverse", "ggiraph", "shinythemes"))
-          # Check what installed
-          print(installed.packages()[,c("Package", "Version")])
-        shell: Rscript {0}
+        run: Rscript -e "install.packages(c('shiny', 'viridis', 'tidyverse', 'ggiraph', 'shinythemes', 'shinylive'))"
       
       - name: Export Shinylive
         run: |
