@@ -16,7 +16,7 @@ jobs:
       - name: Install dependencies
         run: |
           install.packages("shinylive")
-          install.packages("renv")
+          install.packages(c("shiny", "viridis", "tidyverse", "ggiraph", "sf", "shinythemes"))
         shell: Rscript {0}
       
       - name: Export Shinylive
