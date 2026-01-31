@@ -6,11 +6,13 @@
 #
 #    https://shiny.posit.co/
 #
+
 library(shiny)
 library(viridis)
 library(tidyverse)
 library(ggiraph)
 library(sf)
+library(shinythemes)
 
 fam_per_country <- 
   read_rds("families_per_countries.rds")
